@@ -10,6 +10,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
+import net.sqlcipher.database.SQLiteDatabase
+import net.sqlcipher.database.SupportFactory
 import javax.inject.Singleton
 
 @Module
@@ -22,7 +24,9 @@ class DatabaseModule {
         context,
         MovieDatabase::class.java,
         DB_NAME
-    ).build()
+    ).fallbackToDestructiveMigration()
+        .openHelperFactory(SupportFactory(SQLiteDatabase.getBytes("irfan".toCharArray())))
+        .build()
 
     @Provides
     fun provideTourismDao(database: MovieDatabase): MovieDao = database.movieDao()
