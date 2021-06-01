@@ -22,11 +22,6 @@
         <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
     </style>
 
-    <style name="CustomTextAppearance" parent="TextAppearance.Design.Tab">
-        <item name="textAllCaps">false</item>
-        <item name="fontFamily">@font/open_sans_semibold</item>
-    </style>
-
     <style name="CustomRatingStyle" parent="@style/Widget.AppCompat.RatingBar.Small">
         <item name="android:progressTint">@color/color_rating</item>
         <item name="android:progressBackgroundTint">@color/color_rating</item>

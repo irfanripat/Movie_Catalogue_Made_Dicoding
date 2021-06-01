@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="favorite">Favorite</string>
+    <string name="you_don_t_have_favourite">You Don\'t Have Favourite</string>
+    <string name="title_favorite">Favorite</string>
 </resources>
